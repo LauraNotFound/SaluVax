@@ -5,8 +5,23 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: sans-serif;
     background-color: #f4f4f4;
+}
+
+.title-saluvax {
+    font-size: 40px;
+    font-weight: 700;
+    color: #30c5d7;
+    margin: 2% 0% 2% 0%;
+}
+
+.icon_saluvax {
+    width: 100%;
+}
+
+.title-inicio {
+    font-size: 25px;
+    margin: 2% 0% 2% 0%;
 }
 
 .container {
@@ -57,11 +72,12 @@ input {
 
 button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #30c5d7;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: medium;
 }
 
 .background-container {
