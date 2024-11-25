@@ -1,0 +1,35 @@
+
+.registro-aplicaciones{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.registro-aplicaciones table{
+    width: 100%;
+    margin: 0% 10%;
+    text-align: center;
+}
+
+.title-registro-aplicaciones, .col-registro-aplicaciones th, .col-registro-aplicaciones td{
+    padding: 5px;
+}
+
+.title-registro-aplicaciones, .col-registro-aplicaciones th{
+    padding: 5px;
+}
+
+.title-registro-aplicaciones{
+    background-color: #009eb0;
+    color: white;
+}
+
+.col-registro-aplicaciones th{
+    background-color: #30c5d7;
+    color: white;
+}
+
+.col-registro-aplicaciones td{
+    border: 1px solid #82d7e0;
+}

@@ -1,0 +1,54 @@
+tr, td, th{
+    padding: 0px;
+}
+
+.user{
+    width: 50%;
+}
+.user-casilla{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+td .item{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.nombres, .apellidos, .sexo, .fech-nac, .dni, .rol, .estado{
+    margin-left: 15px;
+    margin: 10px 0px 10px 10px;
+}
+
+
+.historial{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.historial table{
+    width: 100%;
+    margin: 0% 20%;
+    text-align: center;
+}
+
+.title-historial, .col-historial th, .col-historial td{
+    padding: 5px;
+}
+
+.title-historial{
+    background-color: #009eb0;
+    color: white;
+}
+
+.col-historial th{
+    background-color: #30c5d7;
+    color: white;
+}
+
+.col-historial td{
+    border: 1px solid #82d7e0;
+}

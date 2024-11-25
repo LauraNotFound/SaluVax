@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/cascaron.css">
+    <title>SaluVax</title>
+</head>
+
+<body>
+    <header>
+        <img class="icon_saluvax" src="/assets/icons/icon_saluvax.png" alt="SaluVax Logo">
+        <p class="SaluVax-header">SaluVax</p>
+    </header>
+    <main>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Perfil')" id="defaultOpen">Perfil</button>
+            <button class="tablinks" onclick="openTab(event, 'StockVacunas')">Registro de Vacunas</button>
+            <button class="tablinks" onclick="openTab(event, 'RegistroAplicaciones')">Registro de Aplicaciones</button>
+            <button class="tablinks" onclick="openTab(event, 'AplicacionVacuna')">Aplicación de Vacuna</button>
+            <button class="tablinks" onclick="openTab(event, 'CerrarSesion')">Cerrar Sesión</button>
+        </div>
+    
+        <div id="Perfil" class="tabcontent">
+            <div class="perfil"></div>
+        </div>
+        <div id="StockVacunas" class="tabcontent">
+            <div class="stock-vacunas"></div>
+        </div>
+    
+        <div id="RegistroAplicaciones" class="tabcontent">
+            <div class="registro-aplicaciones"></div>
+        </div>
+    
+        <div id="AplicacionVacuna" class="tabcontent">
+            <div class="aplicacion-vacuna"></div>
+        </div>
+    
+        <div id="CerrarSesion" class="tabcontent">
+        </div>
+    </main>
+    <footer>
+        <p>LauraNotFound Design - 2024</p>
+    </footer>
+    <script src="/js/cascaron.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+.stock-vacunas{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.stock-vacunas table{
+    width: 100%;
+    margin: 0% 10%;
+    text-align: center;
+}
+
+.title-stock, .col-stock th, .col-stock td{
+    padding: 5px;
+}
+
+.title-stock, .col-stock th{
+    padding: 5px;
+}
+
+.title-stock{
+    background-color: #009eb0;
+    color: white;
+}
+
+.col-stock th{
+    background-color: #30c5d7;
+    color: white;
+}
+
+.col-stock td{
+    border: 1px solid #82d7e0;
+}
