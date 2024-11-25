@@ -9,3 +9,15 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+.titulo-pagina{
+    text-align: center;
+}
+
+.titulo{
+    font-size: 24px;
+    font-weight: 700;
+    color: #30c5d7;
+    margin: 10px 0px;
+    padding: 0px;
+}

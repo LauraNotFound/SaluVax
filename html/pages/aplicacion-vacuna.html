@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,97 @@
     <link rel="stylesheet" href="/style.css">
     <title>Aplicación de Vacuna</title>
 </head>
+
 <body>
     <header>
-
+        <div class="titulo-pagina">
+            <p class="titulo">Registrar aplicación de medicamento</p>
+        </div>
     </header>
     <main>
-
+        <div class="table-aplicacion">
+            <form action="#">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="id-vial">ID Medicamento:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="id-vial" name="id-vial" placeholder="ID del medicamento">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="nombre-medicamento">Nombre del medicamento:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="nombre-medicamento" name="nombre-medicamento" placeholder="Nombre del medicamento">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="num-dosis">N° dosis:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="num-dosis" name="num-dosis" placeholder="N° dosis">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="fecha-aplicacion">Fecha de aplicación:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="fecha-aplicacion" name="fecha-aplicacion" placeholder="Fecha de aplicación">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dni-paciente">N° Identificación del paciente:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="dni-paciente" name="dni-paciente" placeholder="DNI del paciente">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="nombre-paciente">Nombres del paciente:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="nombre-paciente" name="nombre-paciente" placeholder="Nombres del paciente">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="id-personal">ID del personal encargado de la aplicación:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="id-personal" name="id-personal" placeholder="ID del personal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="nombre-personal">Nombres del personal encargado de la aplicación:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="nombre-personal" name="nombre-personal" placeholder="Nombres del personal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="btn-registrar">
+                                    <button type="submit">Registrar la vacunación</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
     </main>
     <footer>
-        
+
     </footer>
 </body>
+
 </html>

@@ -14,14 +14,13 @@ tr, td, th{
 td .item{
     font-size: 15px;
     font-weight: 500;
-    margin: 10px 0px;
+    margin: 10px;
 }
 
 .nombres, .apellidos, .sexo, .fech-nac, .dni, .rol, .estado{
     margin-left: 15px;
-    margin: 10px 0px 10px 10px;
+    margin: 10px;
 }
-
 
 .historial{
     display: flex;
