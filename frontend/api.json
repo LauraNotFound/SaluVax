@@ -1,0 +1,103 @@
+{
+  "vacunas": [
+    {
+      "id_vacuna": "V001",
+      "nombre": "Metronidazol",
+      "lote": "154-H",
+      "fecha_caducidad": "2030-12-16",
+      "stock": 150,
+      "descripcion": "Enfermedad: amebiasis"
+    },
+    {
+      "id_vacuna": "V002",
+      "nombre": "Vacuna BCG",
+      "lote": "298-C",
+      "fecha_caducidad": "2031-05-20",
+      "stock": 100,
+      "descripcion": "Prevención de tuberculosis"
+    }
+  ],
+  "pacientes": [
+    {
+      "id_paciente": "P001",
+      "dni": "12345678",
+      "nombre": "Laura Cecilia",
+      "apellido": "Mendoza Morales",
+      "fecha_nacimiento": "1990-06-15",
+      "telefono": "987654321",
+      "direccion": "Av. Siempre Viva 123"
+    },
+    {
+      "id_paciente": "P002",
+      "dni": "87654321",
+      "nombre": "Juan Carlos Pérez Soto",
+      "fecha_nacimiento": "1985-03-22",
+      "telefono": "954321876",
+      "direccion": "Jr. Los Pinos 456"
+    }
+  ],
+  "personal_salud": [
+    {
+      "id_personal_salud": "PS001",
+      "usuario": "PS001",
+      "contrasenia": "pass1234",
+      "nombre": "Sandra Katherine",
+      "apellido": "Mendoza Morales",
+      "fecha_nacimiento": "1975-09-10",
+      "sexo": "F",
+      "dni": "12345678",
+      "rol": "Enfermera",
+      "estado": "Activo"
+    },
+    {
+      "id_personal_salud": "PS002",
+      "usuario": "PS002",
+      "contrasenia": "securepass",
+      "nombre": "Carlos Alberto",
+      "apellido": "Pérez Soto",
+      "fecha_nacimiento": "1960-02-20",
+      "sexo": "M",
+      "dni": "87654321",
+      "rol": "Doctor",
+      "estado": "Activo"
+    }
+  ],
+  "aplicaciones": [
+    {
+      "id_aplicacion": "A001",
+      "id_personal_salud": "PS001",
+      "nombre_medicamento": "Metronidazol",
+      "dosis": 1,
+      "fecha_aplicacion": "2030-12-16",
+      "nombre_paciente": "Juan Carlos Pérez Soto",
+      "nombre_personal": "Adriana Caroline Suarez Ordoñez"
+    },
+    {
+      "id_aplicacion": "A002",
+      "id_personal_salud": "PS001",
+      "nombre_medicamento": "Vacuna BCG",
+      "dosis": 1,
+      "fecha_aplicacion": "2030-12-16",
+      "nombre_paciente": "Laura Cecilia Mendoza Morales",
+      "nombre_personal": "Carlos Alberto Pérez Soto"
+    },
+    {
+      "id_aplicacion": "A003",
+      "id_personal_salud": "PS002",
+      "nombre_medicamento": "Ibuprofeno",
+      "dosis": 2,
+      "fecha_aplicacion": "2030-12-16",
+      "nombre_paciente": "Juan Carlos Pérez Soto",
+      "nombre_personal": "Adriana Caroline Suarez Ordoñez"
+    },
+    {
+      "id_aplicacion": "A004",
+      "id_personal_salud": "PS002",
+      "nombre_medicamento": "Vacuna BCG",
+      "dosis": 1,
+      "fecha_aplicacion": "2030-12-16",
+      "nombre_paciente": "Laura Cecilia Mendoza Morales",
+      "nombre_personal": "Carlos Alberto Pérez Soto"
+    }
+  ]
+}

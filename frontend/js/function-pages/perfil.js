@@ -1,8 +1,8 @@
-// Obtener el ID del usuario del almacenamiento local
 const userId = localStorage.getItem('userId');
+console.log('User  ID:', userId);
 
 if (userId) {
-    // Cargar la información del personal de salud
+
     fetch('http://localhost:3000/personal_salud')
         .then(response => {
             if (!response.ok) {
@@ -11,12 +11,16 @@ if (userId) {
             return response.json();
         })
         .then(data => {
+            console.log('Datos de personal de salud:', data); 
             const user = data.find(user => user.id === userId);
             if (user) {
-                // Llenar la información del perfil
-                document.querySelector('.nombre').textContent = user.nombre;
-                document.querySelector('.rol').textContent = user.rol;
-                // Agregar más campos según sea necesario
+                document.querySelector('.nombres').textContent = user.nombre || 'Cargando...';
+                document.querySelector('.apellidos').textContent = user.apellido || 'Cargando...';
+                document.querySelector('.sexo').textContent = user.sexo || 'Cargando...';
+                document.querySelector('.fech-nac').textContent = user.fecha_nacimiento || 'Cargando...';
+                document.querySelector('.dni').textContent = user.dni || 'Cargando...';
+                document.querySelector('.rol').textContent = user.rol || 'Cargando...';
+                document.querySelector('.estado').textContent = user.estado || 'Cargando...';
             } else {
                 console.error('Usuario no encontrado');
             }
@@ -25,7 +29,12 @@ if (userId) {
             console.error('Error:', error);
         });
 
-    // Cargar el historial de aplicaciones
+    cargarHistorialAplicacionesPersonal();
+} else {
+    console.error('No hay usuario logueado');
+}
+
+function cargarHistorialAplicacionesPersonal() {
     fetch('http://localhost:3000/aplicaciones')
         .then(response => {
             if (!response.ok) {
@@ -34,22 +43,28 @@ if (userId) {
             return response.json();
         })
         .then(data => {
-            const historial = data.filter(app => app.id_personal === userId);
+            console.log('Historial de aplicaciones:', data);
+            const historial = data.filter(historial => {
+                return String(historial.id_personal_salud) === userId;
+            });
+            console.log('Tipo de userId:', typeof userId);
+            console.log('Tipo de id_personal_salud:', typeof historial.id_personal_salud);
+            console.log('Historial filtrado:', historial);
             const historialTableBody = document.querySelector('.historial tbody');
-            historial.forEach(app => {
+            historialTableBody.innerHTML = '';
+            historial.forEach(historial => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${app.fecha_aplicacion}</td>
-                    <td>${app.id_vacuna}</td>
-                    <td>${app.dosis}</td>
-                    <td>${app.dni_paciente}</td>
-                `;
+            <td>${historial.fecha_aplicacion}</td>
+            <td>${historial.id_vacuna}</td>
+            <td>${historial.dosis}</td>
+            <td>${historial.nombre_paciente}</td>
+        `;
                 historialTableBody.appendChild(row);
             });
         })
         .catch(error => {
             console.error('Error:', error);
-        });
-} else {
-    console.error('No hay usuario logueado');
+        }
+    );
 }
