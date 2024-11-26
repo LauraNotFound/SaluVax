@@ -3,6 +3,14 @@ from vaccinationsys.entities.usuario import UsuarioEntity
 from vaccinationsys.models import Usuario
 
 class UsuarioDAO(DAOInterface):
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if not cls._instance:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+
     def crear(self, data: dict) -> UsuarioEntity:
         # Create a new Usuario instance
         usuario = Usuario.objects.create(

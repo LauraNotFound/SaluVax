@@ -3,6 +3,14 @@ from vaccinationsys.entities.rol import RolEntity
 from vaccinationsys.models import Rol
 
 class RolDAO(DAOInterface):
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if not cls._instance:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+
     def crear(self, data: dict) -> RolEntity:
         # Create a new Rol instance
         rol = Rol.objects.create(nombre=data["nombre"])

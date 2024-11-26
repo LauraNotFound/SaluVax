@@ -3,6 +3,14 @@ from vaccinationsys.entities.vacuna import VacunaEntity
 from vaccinationsys.models import Vacuna
 
 class VacunaDAO(DAOInterface):
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if not cls._instance:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+
     def crear(self, data: dict) -> VacunaEntity:
         # Create a new Vacuna instance
         vacuna = Vacuna.objects.create(
