@@ -3,6 +3,14 @@ from vaccinationsys.entities.paciente import PacienteEntity
 from vaccinationsys.models import Paciente
 
 class PacienteDAO(DAOInterface):
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if not cls._instance:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+
     def crear(self, data: dict) -> PacienteEntity:
         paciente = Paciente.objects.create(
             nombres=data["nombres"],

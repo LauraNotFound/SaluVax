@@ -3,6 +3,14 @@ from vaccinationsys.entities.vial import VialEntity
 from vaccinationsys.models import Vial
 
 class VialDAO(DAOInterface):
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if not cls._instance:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+
     def crear(self, data: dict) -> VialEntity:
         vial = Vial.objects.create(
             nombre=data["nombre"],
