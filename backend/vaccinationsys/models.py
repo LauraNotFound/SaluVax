@@ -1,7 +1,7 @@
-from enum import unique
+# from enum import unique
+# from django.db.models.functions import Length
+# from django.utils.module_loading import module_dir
 from django.db import models
-from django.db.models.functions import Length
-from django.utils.module_loading import module_dir
 
 # Create your models here.
 class Lote(models.Model):
@@ -51,7 +51,7 @@ class Usuario(models.Model):
         return f"{self.nombres} {self.apellidos}"
 
 class Vacuna(models.Model):
-    dosis_ml = models.DecimalField(decimal_places=2)
+    dosis_ml = models.DecimalField(max_digits=5, decimal_places=2)
     fecha_inyeccion = models.DateField()
 
     vial = models.ForeignKey(Vial, on_delete=models.CASCADE)

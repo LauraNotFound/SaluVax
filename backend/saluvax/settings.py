@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # añadidos por mi
     'rest_framework',
+    'vaccinationsys',
 ]
 
 MIDDLEWARE = [
