@@ -19,7 +19,7 @@ function openTab(evt, tabName) {
 
   // Verificar si es la pestaña de "Cerrar Sesión"
   if (tabName === "CerrarSesion") {
-    window.location.href = "/html/pages/inicio-sesion.html";
+    window.location.href = "/html/inicio-sesion.html";
     return;
   }
 
